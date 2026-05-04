@@ -1,0 +1,15 @@
+{
+	"name": "df-mahima",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "950dbe4a-563c-4f57-8807-12f624a07fc5",
+		"tenantId": "6853a7e4-5863-4b80-9f2d-fd60679507c2"
+	}
+}
