@@ -17,7 +17,7 @@
 		"type": "Excel",
 		"typeProperties": {
 			"sheetName": {
-				"value": "dataset().sheet",
+				"value": "@dataset().sheet",
 				"type": "Expression"
 			},
 			"location": {

@@ -67,7 +67,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"dbtablename": {
-											"value": "@pipeline().parameters.tablename",
+											"value": "@item().table",
 											"type": "Expression"
 										}
 									}
