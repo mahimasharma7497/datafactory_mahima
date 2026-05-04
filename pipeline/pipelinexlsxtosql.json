@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.sheetname",
+						"value": "@pipeline().parameters.fileList",
 						"type": "Expression"
 					},
 					"activities": [
@@ -54,8 +54,8 @@
 									"referenceName": "ds_excel",
 									"type": "DatasetReference",
 									"parameters": {
-										"db_sheetname": {
-											"value": "@item().sheetname",
+										"file": {
+											"value": "@item().file",
 											"type": "Expression"
 										}
 									}
@@ -67,7 +67,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"dbtablename": {
-											"value": "@item().sheetname",
+											"value": "@pipeline().parameters.tablename",
 											"type": "Expression"
 										}
 									}
@@ -79,17 +79,23 @@
 			}
 		],
 		"parameters": {
-			"sheetname": {
+			"fileList": {
 				"type": "array",
 				"defaultValue": [
 					{
-						"sheetname": "dim_airports"
+						"file": "dim_airports.xlsx",
+						"sheet": "Sheet1",
+						"table": "dim_airports"
 					},
 					{
-						"sheetname": "dim_passengers"
+						"file": "dim_passengers.xlsx",
+						"sheet": "Sheet1",
+						"table": "dim_passengers"
 					},
 					{
-						"sheetname": "fact_bookings"
+						"file": "fact_bookings.xlsx",
+						"sheet": "Sheet1",
+						"table": "fact_bookings"
 					}
 				]
 			}
