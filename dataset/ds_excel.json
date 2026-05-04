@@ -19,6 +19,10 @@
 			},
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().db_sheetname",
+					"type": "Expression"
+				},
 				"container": "source"
 			},
 			"firstRowAsHeader": true
