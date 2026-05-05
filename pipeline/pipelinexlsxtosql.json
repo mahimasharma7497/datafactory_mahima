@@ -57,6 +57,10 @@
 										"file": {
 											"value": "@item().file",
 											"type": "Expression"
+										},
+										"sheet": {
+											"value": "@item().sheet",
+											"type": "Expression"
 										}
 									}
 								}
